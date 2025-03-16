@@ -1,0 +1,23 @@
+{
+  "name": "symfony-api-vue",
+  "version": "1.0.0",
+  "description": "Pet project for learning Symfony API + Swagger + OpenAPI + Docket + PostgreSQL   Front: Vue.js   NoSQL will be added in the future versions.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimitri-lda/symfony-api-vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimitri-lda/symfony-api-vue/issues"
+  },
+  "homepage": "https://github.com/dimitri-lda/symfony-api-vue#readme"
+}

@@ -1,0 +1,48 @@
+version: "3"
+
+tasks:
+  setup:
+    desc: "Install dependencies"
+    cmds:
+      - composer install
+      - npm install
+
+  up:
+    cmds:
+      - docker-compose up
+    silent: true
+  upd:
+    cmds:
+      - docker-compose up -d
+    silent: true
+  stop:
+    cmds:
+      - docker-compose stop
+  down:
+    cmds:
+      - docker-compose down
+
+  cache-clear:
+    desc: "Clear Symfony cache"
+    cmds:
+      - php bin/console cache:clear
+
+  diff:
+    desc: "Run Doctrine migrations"
+    cmds:
+      - php bin/console doctrine:migrations:diff --no-interaction
+
+  migrate:
+    desc: "Run Doctrine migrations"
+    cmds:
+      - php bin/console doctrine:migrations:migrate --no-interaction
+
+  test:
+    desc: "Run PHPUnit tests"
+    cmds:
+      - php bin/phpunit
+
+  logs:
+    desc: "View Docker logs"
+    cmds:
+      - docker-compose logs -f
