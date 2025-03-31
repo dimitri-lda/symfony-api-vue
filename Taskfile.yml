@@ -21,6 +21,9 @@ tasks:
   down:
     cmds:
       - docker-compose down
+  bash:
+    cmds:
+      - docker exec -it symfony-api-vue-php-1 bash
 
   cache-clear:
     desc: "Clear Symfony cache"

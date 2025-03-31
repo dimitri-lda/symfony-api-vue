@@ -4,6 +4,9 @@ Pet project for learning Symfony API + Swagger + OpenAPI + Docket + PostgreSQL
 Front: Vue.js  
 NoSQL will be added in the future versions.
 
+Symfony 7.2.4
+PHP 8.2.28
+
 run Symfony backend:
 ```task up``` or ```task upd```
 local url: http://127.0.0.1:8080/ 
