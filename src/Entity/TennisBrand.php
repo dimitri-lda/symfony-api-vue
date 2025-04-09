@@ -1,6 +1,7 @@
 <?php
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Traits\IdentifierTrait;
 
@@ -18,6 +19,9 @@ class TennisBrand
 
     #[ORM\Column(type: "string", length: 3)]
     private ?string $countryCode;
+
+    #[ORM\OneToMany(targetEntity: TennisRacketModel::class, mappedBy: "brand", cascade: ["persist", "remove"])]
+    private Collection $variants;
 
     public function getName(): ?string
     {

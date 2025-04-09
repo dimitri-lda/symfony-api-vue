@@ -4,17 +4,12 @@ namespace App\Controller\v1\TennisBrand;
 
 use App\Entity\TennisBrand;
 use Doctrine\ORM\EntityManagerInterface;
-use Nelmio\ApiDocBundle\Attribute\Operation;
 use OpenApi\Attributes as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/api/v1/tennis_brands', name: 'api_tennis_brands_list', methods: ['GET'])]
-//#[Operation(
-//    operationId: 'getTennisBrands',
-//    description: 'Retrieves a list of Tennis Brands',
-//)] todo rework
 #[OA\Response(
     response: 200,
     description: 'List of Tennis Brands',

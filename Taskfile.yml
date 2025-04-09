@@ -33,17 +33,17 @@ tasks:
   diff:
     desc: "Run Doctrine migrations"
     cmds:
-      - php bin/console doctrine:migrations:diff --no-interaction
+      - docker exec -it symfony-api-vue-php-1 php bin/console doctrine:migrations:diff --no-interaction
 
   migrate:
     desc: "Run Doctrine migrations"
     cmds:
-      - php bin/console doctrine:migrations:migrate --no-interaction
+      - docker exec -it symfony-api-vue-php-1 php bin/console doctrine:migrations:migrate --no-interaction
 
   test:
     desc: "Run PHPUnit tests"
     cmds:
-      - php bin/phpunit
+      - docker exec -it symfony-api-vue-php-1 php bin/phpunit
 
   logs:
     desc: "View Docker logs"

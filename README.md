@@ -7,6 +7,8 @@ NoSQL will be added in the future versions.
 Symfony 7.2.4
 PHP 8.2.28
 
+docker exec -it symfony-api-vue-php-1 php bin/console doctrine:fixtures:load
+
 run Symfony backend:
 ```task up``` or ```task upd```
 local url: http://127.0.0.1:8080/ 

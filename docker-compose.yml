@@ -27,7 +27,7 @@ services:
       MYSQL_PASSWORD: pwd_secret
       MYSQL_ROOT_PASSWORD: pwd_rootsecret
     ports:
-      - "3307:3306"   # Внешний порт 3307 для избежания конфликтов
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
 
