@@ -1,13 +1,15 @@
 FROM php:8.2-fpm
 
-# Установка системных зависимостей
 RUN apt-get update && apt-get install -y \
-    libpq-dev \
     git \
     unzip \
-    && docker-php-ext-install pdo pdo_pgsql
+    && docker-php-ext-install pdo pdo_mysql
 
-# Установка Composer
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
+COPY ./docker/php/conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
